@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package shoezoo.product;
+
+option go_package = "proto/v1";
+
+service ProductService {
+    rpc ShowProduct(ShowProductRequest) returns (ShowProductResponse) {};
+}
+
+message Product {
+    int32 id = 1;
+    string name = 2;
+    int32 price = 3;
+}
+
+message ProductInput {
+    string name = 1;
+    int32 price = 2;
+}
+
+/*
+    Show
+*/
+message ShowProductRequest {
+    int32 id = 1;
+}
+
+message ShowProductResponse {
+    Product product = 1;
+}
