@@ -5,7 +5,7 @@ import (
 	"log"
 	"net"
 
-	handler "github.com/halhal23/shoezoo/product/interface/grpc"
+	"github.com/halhal23/shoezoo/product/interface/grpc/handler"
 	pb "github.com/halhal23/shoezoo/product/proto/v1"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
